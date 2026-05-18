@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundo del Sublimado – Ropa y Accesorios Personalizados</title>
+  <meta name="description" content="Sublimación en ropa, tazas, vasos y gorras. Diseños únicos y pedidos personalizados. Envíos a todo el país." />
+  <meta name="keywords" content="sublimación, remeras personalizadas, tazas sublimadas, gorras, buzos, diseño personalizado, envíos argentina" />
+  <meta property="og:title" content="Mundo del Sublimado" />
+  <meta property="og:description" content="Ropa y accesorios personalizados con sublimación. Envíos a todo el país." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon SVG inline como data URI -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%233971b8'/><ellipse cx='50' cy='50' rx='48' ry='18' fill='none' stroke='%23c8d69b' stroke-width='5'/><circle cx='50' cy='50' r='22' fill='%23f6e6a5'/></svg>" />
+
+  <!-- Google Fonts con SRI no requerido para fonts, pero usamos display=swap para performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/estilos.css" />
+
+  <!--
+    SEGURIDAD – Content-Security-Policy recomendado para Netlify:
+    Agregar en netlify.toml:
+
+    [[headers]]
+      for = "/*"
+      [headers.values]
+        Content-Security-Policy = "default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: https:; script-src 'self'; connect-src 'self'; frame-ancestors 'none';"
+        X-Frame-Options = "DENY"
+        X-Content-Type-Options = "nosniff"
+        Referrer-Policy = "strict-origin-when-cross-origin"
+        Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+  -->
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="inicio">
+    <nav class="nav container">
+      <a href="#inicio" class="logo" aria-label="Mundo del Sublimado – Inicio">
+        <!-- Logo planeta SVG -->
+        <svg class="logo-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="40" cy="40" r="36" fill="#3971b8"/>
+          <!-- continentes estilizados -->
+          <ellipse cx="30" cy="32" rx="10" ry="7" fill="#c8d69b" opacity="0.9"/>
+          <ellipse cx="52" cy="45" rx="8" ry="6" fill="#c8d69b" opacity="0.9"/>
+          <ellipse cx="38" cy="52" rx="6" ry="4" fill="#c8d69b" opacity="0.7"/>
+          <!-- anillo orbital -->
+          <ellipse cx="40" cy="40" rx="46" ry="17" fill="none" stroke="#f6e6a5" stroke-width="4" stroke-dasharray="6 3"/>
+          <!-- brillo -->
+          <circle cx="28" cy="26" r="6" fill="white" opacity="0.18"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-nombre">Mundo del</span>
+          <span class="logo-sublimado">Sublimado</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+        <li><a href="#envios" class="nav-link">Envíos</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li>
+          <!-- ============================================================
+               EDITAR: Reemplazar el número de WhatsApp aquí y en todo el sitio
+               Formato internacional sin +: 5491XXXXXXXXX (Argentina)
+               ============================================================ -->
+          <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20hacer%20un%20pedido"
+             class="btn-nav-wa"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Contactar por WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">🌍 Envíos a todo el país</div>
+          <h1 id="hero-title" class="hero-title">
+            Tu diseño,<br/>
+            <span class="hero-accent">tu mundo.</span>
+          </h1>
+          <p class="hero-desc">
+            Sublimamos remeras, buzos, gorras, tazas y vasos con los colores más vibrantes. 
+            Pedidos personalizados para particulares y empresas.
+          </p>
+          <div class="hero-ctas">
+            <a href="#catalogo" class="btn-primary">Ver catálogo</a>
+            <!-- EDITAR: número de WhatsApp aquí -->
+            <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20hacer%20un%20pedido%20personalizado"
+               class="btn-secondary"
+               target="_blank"
+               rel="noopener noreferrer">
+              Pedido personalizado
+            </a>
+          </div>
+        </div>
+        <div class="hero-planet" aria-hidden="true">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="big-planet">
+            <defs>
+              <radialGradient id="planetGrad" cx="35%" cy="35%">
+                <stop offset="0%" stop-color="#5a9fd4"/>
+                <stop offset="100%" stop-color="#1f4f8a"/>
+              </radialGradient>
+            </defs>
+            <circle cx="150" cy="150" r="120" fill="url(#planetGrad)"/>
+            <ellipse cx="105" cy="115" rx="40" ry="28" fill="#c8d69b" opacity="0.85"/>
+            <ellipse cx="185" cy="145" rx="32" ry="22" fill="#c8d69b" opacity="0.85"/>
+            <ellipse cx="130" cy="185" rx="24" ry="16" fill="#c8d69b" opacity="0.7"/>
+            <ellipse cx="150" cy="150" rx="145" ry="52" fill="none" stroke="#f6e6a5" stroke-width="8" stroke-dasharray="10 5"/>
+            <circle cx="100" cy="95" r="22" fill="white" opacity="0.12"/>
+            <!-- Camiseta flotante -->
+            <g transform="translate(95,108) scale(0.85)" opacity="0.92">
+              <rect x="20" y="30" width="70" height="60" rx="8" fill="#f6e6a5"/>
+              <polygon points="20,30 5,50 20,55" fill="#f6e6a5"/>
+              <polygon points="90,30 105,50 90,55" fill="#f6e6a5"/>
+              <rect x="35" y="10" width="40" height="25" rx="12" fill="#f6e6a5"/>
+            </g>
+          </svg>
+          <div class="orbit-tag tag-1">🎨 Diseño único</div>
+          <div class="orbit-tag tag-2">✨ Full color</div>
+          <div class="orbit-tag tag-3">📦 Envío express</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCTOS DESTACADOS / CATEGORÍAS ========== -->
+    <section class="categorias" id="catalogo" aria-labelledby="cat-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="cat-title" class="section-title">Nuestro Catálogo</h2>
+          <p class="section-desc">Elegí tu producto y personalizá con tu diseño favorito</p>
+        </div>
+
+        <!-- Filtros de categoría -->
+        <div class="cat-filters" role="tablist" aria-label="Filtrar por categoría">
+          <button class="cat-btn active" data-cat="all" role="tab" aria-selected="true">Todos</button>
+          <button class="cat-btn" data-cat="ropa" role="tab" aria-selected="false">👕 Ropa</button>
+          <button class="cat-btn" data-cat="tazas" role="tab" aria-selected="false">☕ Tazas y Vasos</button>
+          <button class="cat-btn" data-cat="gorras" role="tab" aria-selected="false">🧢 Gorras</button>
+          <button class="cat-btn" data-cat="personalizados" role="tab" aria-selected="false">⭐ Personalizados</button>
+        </div>
+
+        <!-- Grid de productos -->
+        <div class="productos-grid" id="productosGrid">
+
+          <!-- Producto 1: Remera -->
+          <article class="producto-card" data-cat="ropa">
+            <div class="producto-img">
+              <div class="placeholder-img" aria-label="Remera sublimada">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="25" y="30" width="70" height="62" rx="6" fill="#3971b8"/>
+                  <polygon points="25,30 5,52 22,58" fill="#3971b8"/>
+                  <polygon points="95,30 115,52 98,58" fill="#3971b8"/>
+                  <rect x="38" y="10" width="44" height="26" rx="14" fill="#3971b8"/>
+                  <circle cx="60" cy="62" r="14" fill="#f6e6a5" opacity="0.9"/>
+                  <text x="60" y="67" text-anchor="middle" fill="#343b1b" font-size="10" font-family="sans-serif">★</text>
+                </svg>
+              </div>
+              <span class="producto-badge">Ropa</span>
+            </div>
+            <div class="producto-info">
+              <h3 class="producto-nombre">Remera Sublimada</h3>
+              <p class="producto-desc">100% poliéster, colores que duran lavado tras lavado. Tallas XS a XXL.</p>
+              <!-- EDITAR: número de WhatsApp aquí -->
+              <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20info%20sobre%20Remera%20Sublimada"
+                 class="btn-wa"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Consultar por Remera Sublimada en WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Pedir este diseño
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 2: Buzo -->
+          <article class="producto-card" data-cat="ropa">
+            <div class="producto-img">
+              <div class="placeholder-img" aria-label="Buzo sublimado">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="18" y="28" width="84" height="66" rx="8" fill="#343b1b"/>
+                  <polygon points="18,28 2,54 20,60" fill="#343b1b"/>
+                  <polygon points="102,28 118,54 100,60" fill="#343b1b"/>
+                  <rect x="38" y="8" width="44" height="26" rx="14" fill="#343b1b"/>
+                  <rect x="46" y="28" width="28" height="14" rx="7" fill="#3971b8"/>
+                  <ellipse cx="60" cy="68" rx="18" ry="10" fill="#c8d69b" opacity="0.8"/>
+                </svg>
+              </div>
+              <span class="producto-badge">Ropa</span>
+            </div>
+            <div class="producto-info">
+              <h3 class="producto-nombre">Buzo / Sudadera</h3>
+              <p class="producto-desc">Frisa interior suave. Sublimación en frente, espalda y mangas. Tallas S a XXL.</p>
+              <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20info%20sobre%20Buzo%20Sublimado"
+                 class="btn-wa"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Consultar por Buzo en WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Pedir este diseño
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 3: Taza -->
+          <article class="producto-card" data-cat="tazas">
+            <div class="producto-img">
+              <div class="placeholder-img" aria-label="Taza sublimada">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="25" y="28" width="65" height="58" rx="8" fill="#f6e6a5"/>
+                  <rect x="90" y="38" width="16" height="28" rx="8" fill="none" stroke="#f6e6a5" stroke-width="5"/>
+                  <ellipse cx="57" cy="28" rx="32" ry="8" fill="#f6e6a5"/>
+                  <rect x="27" y="36" width="61" height="8" fill="#3971b8" opacity="0.6"/>
+                  <text x="57" y="72" text-anchor="middle" fill="#3971b8" font-size="22" font-family="sans-serif">☕</text>
+                  <!-- vapor -->
+                  <path d="M44 18 Q46 10 44 4" stroke="#c8d69b" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <path d="M57 16 Q59 8 57 2" stroke="#c8d69b" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <path d="M70 18 Q72 10 70 4" stroke="#c8d69b" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="producto-badge">Tazas</span>
+            </div>
+            <div class="producto-info">
+              <h3 class="producto-nombre">Taza Sublimada</h3>
+              <p class="producto-desc">Cerámica blanca de calidad. Imagen que no destiñe. Ideal para regalos.</p>
+              <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20info%20sobre%20Taza%20Sublimada"
+                 class="btn-wa"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Consultar por Taza en WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Pedir este diseño
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 4: Short -->
+          <article class="producto-card" data-cat="ropa">
+            <div class="producto-img">
+              <div class="placeholder-img" aria-label="Short sublimado">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M20,20 L100,20 L90,85 L62,85 L60,55 L58,85 L30,85 Z" fill="#c8d69b"/>
+                  <path d="M20,20 L40,20 L38,35 L20,35 Z" fill="#3971b8" opacity="0.5"/>
+                  <path d="M100,20 L80,20 L82,35 L100,35 Z" fill="#3971b8" opacity="0.5"/>
+                  <rect x="20" y="20" width="80" height="12" rx="4" fill="#343b1b" opacity="0.3"/>
+                </svg>
+              </div>
+              <span class="producto-badge">Ropa</span>
+            </div>
+            <div class="producto-info">
+              <h3 class="producto-nombre">Short Sublimado</h3>
+              <p class="producto-desc">Liviano y transpirable. Perfecto para deporte y uso diario. Tallas XS a XXL.</p>
+              <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20info%20sobre%20Short%20Sublimado"
+                 class="btn-wa"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Consultar por Short en WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Pedir este diseño
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 5: Vaso -->
+          <article class="producto-card" data-cat="tazas">
+            <div class="producto-img">
+              <div class="placeholder-img" aria-label="Vaso sublimado">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M35,18 L85,18 L78,88 L42,88 Z" fill="#3971b8" rx="4"/>
+                  <ellipse cx="60" cy="18" rx="25" ry="7" fill="#5a9fd4"/>
+                  <rect x="37" y="26" width="46" height="10" fill="#f6e6a5" opacity="0.5"/>
+                  <text x="60" y="68" text-anchor="middle" fill="#f6e6a5" font-size="20" font-family="sans-serif">🥤</text>
+                </svg>
+              </div>
+              <span class="producto-badge">Tazas</span>
+            </div>
+            <div class="producto-info">
+              <h3 class="producto-nombre">Vaso Sublimado</h3>
+              <p class="producto-desc">Vaso de aluminio o vidrio con diseño full color. Ideal para el día a día.</p>
+              <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20info%20sobre%20Vaso%20Sublimado"
+                 class="btn-wa"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Consultar por Vaso en WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Pedir este diseño
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 6: Gorra -->
+          <article class="producto-card" data-cat="gorras">
+            <div class="producto-img">
+              <div class="placeholder-img" aria-label="Gorra sublimada">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <ellipse cx="60" cy="60" rx="50" ry="22" fill="#343b1b"/>
+                  <path d="M10,60 Q60,10 110,60" fill="#3971b8"/>
+                  <ellipse cx="60" cy="60" rx="50" ry="10" fill="#2a5a9a"/>
+                  <rect x="30" y="56" width="60" height="8" rx="4" fill="#343b1b"/>
+                  <rect x="75" y="58" width="38" height="6" rx="3" fill="#343b1b"/>
+                  <circle cx="60" cy="25" r="5" fill="#f6e6a5"/>
+                  <text x="60" y="48" text-anchor="middle" fill="#f6e6a5" font-size="14" font-family="sans-serif">🌟</text>
+                </svg>
+              </div>
+              <span class="producto-badge">Gorras</span>
+            </div>
+            <div class="producto-info">
+              <h3 class="producto-nombre">Gorra Sublimada</h3>
+              <p class="producto-desc">Panel frontal sublimado con diseño full color. Ajuste trasero regulable.</p>
+              <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20info%20sobre%20Gorra%20Sublimada"
+                 class="btn-wa"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Consultar por Gorra en WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Pedir este diseño
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 7: Pedido personalizado -->
+          <article class="producto-card producto-especial" data-cat="personalizados">
+            <div class="producto-img">
+              <div class="placeholder-img placeholder-especial" aria-label="Pedido personalizado">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="60" cy="50" r="38" fill="#3971b8" opacity="0.15"/>
+                  <text x="60" y="38" text-anchor="middle" font-size="28">✨</text>
+                  <text x="60" y="68" text-anchor="middle" fill="#3971b8" font-size="12" font-family="sans-serif" font-weight="bold">TU DISEÑO</text>
+                </svg>
+              </div>
+              <span class="producto-badge badge-especial">⭐ Especial</span>
+            </div>
+            <div class="producto-info">
+              <h3 class="producto-nombre">Pedido Personalizado</h3>
+              <p class="producto-desc">¿Tenés una idea? La hacemos realidad. Logos, fotos, diseños empresariales, regalos.</p>
+              <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20hacer%20un%20pedido%20personalizado"
+                 class="btn-wa btn-wa-especial"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Consultar pedido personalizado por WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar ahora
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 8: Kit regalo -->
+          <article class="producto-card" data-cat="personalizados">
+            <div class="producto-img">
+              <div class="placeholder-img" aria-label="Kit regalo sublimado">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="22" y="45" width="76" height="45" rx="6" fill="#f6e6a5"/>
+                  <rect x="22" y="32" width="76" height="16" rx="4" fill="#3971b8"/>
+                  <rect x="56" y="32" width="8" height="58" fill="#c8d69b"/>
+                  <path d="M60,32 Q45,18 40,24 Q35,30 60,32" fill="#c8d69b"/>
+                  <path d="M60,32 Q75,18 80,24 Q85,30 60,32" fill="#c8d69b"/>
+                  <text x="60" y="76" text-anchor="middle" fill="#343b1b" font-size="18">🎁</text>
+                </svg>
+              </div>
+              <span class="producto-badge">Personalizados</span>
+            </div>
+            <div class="producto-info">
+              <h3 class="producto-nombre">Kit Regalo Sublimado</h3>
+              <p class="producto-desc">Armamos kits con taza, remera y más. Perfecto para cumpleaños o eventos corporativos.</p>
+              <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20info%20sobre%20Kit%20Regalo%20Sublimado"
+                 class="btn-wa"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Consultar por Kit Regalo en WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Pedir este diseño
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /productos-grid -->
+      </div>
+    </section>
+
+    <!-- ========== ENVÍOS ========== -->
+    <section class="envios" id="envios" aria-labelledby="envios-title">
+      <div class="container">
+        <h2 id="envios-title" class="section-title section-title-light">📦 Envíos a todo el país</h2>
+        <div class="envios-grid">
+          <div class="envio-card">
+            <div class="envio-icon">🚚</div>
+            <h3>Correo Argentino</h3>
+            <p>Enviamos por Correo Argentino a cualquier punto del país con seguimiento incluido.</p>
+          </div>
+          <div class="envio-card">
+            <div class="envio-icon">⚡</div>
+            <h3>Andreani / OCA</h3>
+            <p>También coordinamos envíos express por Andreani u OCA para mayor velocidad.</p>
+          </div>
+          <div class="envio-card">
+            <div class="envio-icon">🏪</div>
+            <h3>Retiro en local</h3>
+            <p>Si estás cerca, coordinamos retiro sin costo adicional. Consultanos por WhatsApp.</p>
+          </div>
+          <div class="envio-card">
+            <div class="envio-icon">📱</div>
+            <h3>Seguimiento</h3>
+            <p>Te enviamos el número de tracking por WhatsApp ni bien despachamos tu pedido.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="contacto" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="contacto-title" class="section-title">¿Cómo contactarnos?</h2>
+          <p class="section-desc">Elegí el canal que más te guste. Respondemos rápido 🚀</p>
+        </div>
+        <div class="contacto-grid">
+
+          <!-- WhatsApp -->
+          <!-- EDITAR: número de WhatsApp aquí -->
+          <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20hacer%20un%20pedido"
+             class="contacto-card contacto-wa"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Contactar por WhatsApp">
+            <div class="contacto-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <h3>WhatsApp</h3>
+            <!-- EDITAR: número visible aquí -->
+            <p>+54 9 11 1234-5678</p>
+            <span class="contacto-cta">Abrir chat →</span>
+          </a>
+
+          <!-- Email -->
+          <!-- EDITAR: dirección de email aquí -->
+          <a href="mailto:mundodelsublimado1234@gmail.com"
+             class="contacto-card contacto-email"
+             aria-label="Enviar email">
+            <div class="contacto-icon">✉️</div>
+            <h3>Email</h3>
+            <p>mundodelsublimado1234<br/>@gmail.com</p>
+            <span class="contacto-cta">Enviar mail →</span>
+          </a>
+
+          <!-- Instagram -->
+          <!-- EDITAR: usuario de Instagram aquí -->
+          <a href="https://instagram.com/mundodelsublimado"
+             class="contacto-card contacto-ig"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Ver Instagram">
+            <div class="contacto-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <h3>Instagram</h3>
+            <!-- EDITAR: usuario de Instagram visible aquí -->
+            <p>@mundodelsublimado</p>
+            <span class="contacto-cta">Ver perfil →</span>
+          </a>
+
+          <!-- TikTok -->
+          <!-- EDITAR: usuario de TikTok aquí -->
+          <a href="https://tiktok.com/@mundodelsublimado"
+             class="contacto-card contacto-tiktok"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Ver TikTok">
+            <div class="contacto-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.79 1.53V6.78a4.85 4.85 0 01-1.02-.09z"/></svg>
+            </div>
+            <h3>TikTok</h3>
+            <!-- EDITAR: usuario de TikTok visible aquí -->
+            <p>@mundodelsublimado</p>
+            <span class="contacto-cta">Ver videos →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <svg class="logo-svg-small" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="40" cy="40" r="36" fill="#3971b8"/>
+          <ellipse cx="30" cy="32" rx="10" ry="7" fill="#c8d69b" opacity="0.9"/>
+          <ellipse cx="52" cy="45" rx="8" ry="6" fill="#c8d69b" opacity="0.9"/>
+          <ellipse cx="40" cy="40" rx="46" ry="17" fill="none" stroke="#f6e6a5" stroke-width="4" stroke-dasharray="6 3"/>
+        </svg>
+        <div>
+          <p class="footer-brand">Mundo del Sublimado</p>
+          <p class="footer-tagline">Tu diseño, tu mundo. 🌍</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <p>📦 Envíos a todo el país</p>
+        <!-- EDITAR: email aquí -->
+        <p>✉️ <a href="mailto:mundodelsublimado1234@gmail.com">mundodelsublimado1234@gmail.com</a></p>
+        <div class="footer-social">
+          <!-- EDITAR: Instagram aquí -->
+          <a href="https://instagram.com/mundodelsublimado" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <!-- EDITAR: TikTok aquí -->
+          <a href="https://tiktok.com/@mundodelsublimado" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.79 1.53V6.78a4.85 4.85 0 01-1.02-.09z"/></svg>
+          </a>
+          <!-- EDITAR: WhatsApp aquí -->
+          <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>© 2025 Mundo del Sublimado. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BOTONES FLOTANTES ========== -->
+  <div class="flotantes" aria-label="Contacto rápido">
+    <!-- EDITAR: número de WhatsApp aquí -->
+    <a href="https://wa.me/5491112345678?text=Hola%20Mundo%20del%20Sublimado%2C%20quiero%20hacer%20un%20pedido"
+       class="fab fab-wa"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span class="fab-tooltip">WhatsApp</span>
+    </a>
+    <!-- EDITAR: usuario de Instagram aquí -->
+    <a href="https://instagram.com/mundodelsublimado"
+       class="fab fab-ig"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <span class="fab-tooltip">Instagram</span>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
